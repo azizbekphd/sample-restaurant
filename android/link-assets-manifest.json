@@ -1,0 +1,53 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Inter.ttf",
+      "sha1": "44b415f3b0ac1da7f3044ba6bcc542a649d4a447"
+    },
+    {
+      "path": "src/assets/img/app_icon.png",
+      "sha1": "2e7220efeae9b0a2018883804a2d8f49f3d7db91"
+    },
+    {
+      "path": "src/assets/img/carousel_item.png",
+      "sha1": "9c317ac171689c05cfcd73634eca57a35d11e8f6"
+    },
+    {
+      "path": "src/assets/img/cup.png",
+      "sha1": "cc279c964ec3e551cd29f9ae79a3c588e0e15219"
+    },
+    {
+      "path": "src/assets/img/delivery.png",
+      "sha1": "58c119ea6a4863795e348df678f92971b22dd05e"
+    },
+    {
+      "path": "src/assets/img/not_found.png",
+      "sha1": "5c97a4df2204b1d49dde20b862e638eac66dd9f1"
+    },
+    {
+      "path": "src/assets/img/promotion_item_1.png",
+      "sha1": "6c134e3e76917231cfff6f70953cd01698c01b0a"
+    },
+    {
+      "path": "src/assets/img/promotion_item_2.png",
+      "sha1": "46e6221f889ccc30f8036cc81c6ad7105604a08f"
+    },
+    {
+      "path": "src/assets/img/promotion_item_3.png",
+      "sha1": "760872942732469b64ba5d5da8241c9145483f07"
+    },
+    {
+      "path": "src/assets/img/promotion_item_4.png",
+      "sha1": "e4c80dfa479e58f8eb2d365bc7d7ff4b498af1a5"
+    },
+    {
+      "path": "src/assets/img/store.png",
+      "sha1": "dbe2deb62c88bbb59e6616d3240c59d578028295"
+    },
+    {
+      "path": "src/assets/img/table_booking.png",
+      "sha1": "8657104ea17bc5c98e52d5f9c1d47c3dd3d7554a"
+    }
+  ]
+}
