@@ -8,11 +8,24 @@ type MyTheme = Theme & {
         text: string;
         border: string;
         notification: string;
-        appbar_menu: string,
+        overlay: string;
+        reverse: string;
+        appbar: {
+            menu: string,
+            back: string,
+        },
         icon: {
             light: string,
             semidark: string,
             dark: string,
+            green: string,
+            blue: string,
+            orange: string,
+            red: string,
+            greenLight: string,
+            blueLight: string,
+            orangeLight: string,
+            redLight: string,
         }
     }
 }

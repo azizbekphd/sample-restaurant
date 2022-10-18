@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import strings from '../../localization';
 import {useMyTheme} from '../../themes';
-import {Label} from '../ui/Text';
+import {BodyText, Label} from '../ui/Text';
 
 const NotFound = () => {
   const theme = useMyTheme();
@@ -20,7 +20,7 @@ const NotFound = () => {
         style={style.image}
       />
       <Label.Large>{strings.not_found_title}</Label.Large>
-      <Label.Medium style={{fontWeight: "normal", marginTop: 2}}>{strings.not_found_subtitle}</Label.Medium>
+      <BodyText style={{marginTop: 2}}>{strings.not_found_subtitle}</BodyText>
     </View>
   );
 };

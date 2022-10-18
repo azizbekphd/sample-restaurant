@@ -1,5 +1,9 @@
 export default {
     app_name: "Sample restaurant",
+    tab_home: "Home",
+    tab_stores: "Stores",
+    tab_order: "Order",
+    tab_profile: "Profile",
     welcome_to: "Welcome to",
     stores: "Stores",
     search_stores: "Search stores",
@@ -14,5 +18,19 @@ export default {
     promotion_campaign: "Promotion campaign",
     promotion_item_title: "Discount all {0} {1} in all stores",
     not_found_title: "Sorry, we nearly found it!",
-    not_found_subtitle: "Please try again, better luck next time"
+    not_found_subtitle: "Please try again, better luck next time",
+    open_time: "Open: {0}",
+    phone_number: "Phone number",
+    address: "Address",
+    orders: "Orders",
+    order_history: "Order history",
+    no_orders_title: "You have no order",
+    no_order_subtitle: "How about trying our new drinks?",
+    order_now: "Order now!",
+    preparing: "Preparing",
+    received: "Order received",
+    delivering: "Delivering",
+    delivered: "Delivered",
+    failed: "Delivery failed",
+    order: "Order"
 }

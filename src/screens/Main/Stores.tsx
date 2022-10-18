@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
-import StoresList from '../components/Stores/StoresList';
-import FilledAppBar from '../components/ui/AppBar/Filled';
-import Screen from '../components/ui/Screen';
-import SearchBar from '../components/ui/SearchBar';
-import {storesDemo} from '../demos';
-import strings from '../localization';
-import {Store} from '../models';
+import StoresList from '../../components/Stores/StoresList';
+import FilledAppBar from '../../components/ui/AppBar/Filled';
+import Screen from '../../components/ui/Screen';
+import SearchBar from '../../components/ui/SearchBar';
+import {storesDemo} from '../../demos';
+import strings from '../../localization';
+import {Store} from '../../models';
 
 const StoresScreen = () => {
   const [queryText, setQueryText] = useState<string>('');

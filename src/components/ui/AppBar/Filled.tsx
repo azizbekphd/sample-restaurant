@@ -15,6 +15,8 @@ const FilledAppBar = ({
   onMenu,
   onClose,
   onBackPress,
+  children,
+  ...props
 }: FilledAppBarProps) => {
   const theme = useMyTheme();
 
@@ -31,7 +33,9 @@ const FilledAppBar = ({
           </IconButton> : <></>
         }
         onMenu={onMenu}
-        onClose={onClose} />
+        onClose={onClose}
+        {...props}
+       />
       {bottom}
     </View>
   );

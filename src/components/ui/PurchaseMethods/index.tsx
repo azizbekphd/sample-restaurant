@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import strings from "../../localization";
-import { useMyTheme } from "../../themes";
-import globalStyle from "../ui/globalStyles";
+import strings from "../../../localization";
+import { useMyTheme } from "../../../themes";
+import globalStyle from "../globalStyles";
 import PurchaseMethod from "./PurchaseMethod";
 
 const PurchaseMethods = () => {
@@ -17,7 +17,7 @@ const PurchaseMethods = () => {
         }
     ]}>
         <PurchaseMethod
-            image={require("../../assets/img/store.png")}
+            image={require("../../../assets/img/store.png")}
             title={strings.store_pickup}
             subtitle={strings.best_quality}
         />
@@ -28,7 +28,7 @@ const PurchaseMethods = () => {
             }
         ]} />
         <PurchaseMethod
-            image={require("../../assets/img/delivery.png")}
+            image={require("../../../assets/img/delivery.png")}
             title={strings.delivery}
             subtitle={strings.always_on_time}
         />

@@ -5,6 +5,7 @@ const globalStyle = StyleSheet.create({
         borderRadius: 8,
         marginHorizontal: 16,
         marginVertical: 6,
+        overflow: "hidden",
     },
     center: {
         justifyContent: "center",

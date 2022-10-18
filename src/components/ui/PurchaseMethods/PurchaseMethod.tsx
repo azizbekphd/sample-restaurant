@@ -1,7 +1,7 @@
 import React from "react"
 import { Image, ImageSourcePropType, StyleSheet, TouchableOpacity, View } from "react-native"
-import { useMyTheme } from "../../themes"
-import { Label, Subtitle } from "../ui/Text"
+import { useMyTheme } from "../../../themes"
+import { Label, Subtitle } from "../Text"
 
 type PurchaseMethodProps = {
     image: ImageSourcePropType,

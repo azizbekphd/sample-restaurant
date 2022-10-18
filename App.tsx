@@ -1,62 +1,34 @@
 import * as React from 'react';
-import {
-  NavigationContainer
-} from '@react-navigation/native';
-import {
-  MyDefaultTheme
-} from "./src/themes"
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import HomeScreen from './src/screens/Home';
-import StoresScreen from './src/screens/Stores';
-import { useColorScheme } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {MyDefaultTheme} from './src/themes';
+import {useColorScheme} from 'react-native';
 import MyDarkTheme from './src/themes/MyDarkTheme';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {
+  Main,
+  OrderDetailsScreen,
+  OrderHistoryScreen,
+  RootStackParamList,
+  StoreDetailsScreen,
+} from './src/screens';
 
-const Tab = createBottomTabNavigator();
-
-function Tabs() {
-  return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
-      <Tab.Screen
-        name="Home"
-        options={{
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="home-variant-outline" size={size} color={color} />
-          ),
-        }}
-        component={HomeScreen} />
-      <Tab.Screen
-        name="Stores"
-        options={{
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="storefront-outline" size={size} color={color}/>
-          )
-        }}
-        component={StoresScreen} />
-      <Tab.Screen name="Order"
-        options={{
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="sticker-text-outline" size={size} color={color}/>
-          )
-        }}
-        component={HomeScreen} />
-      <Tab.Screen name="Profile"
-        options={{
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="account-circle-outline" size={size} color={color}/>
-          )
-        }}
-        component={HomeScreen} />
-    </Tab.Navigator>
-  );
-}
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
   const scheme = useColorScheme();
-  
+
   return (
-    <NavigationContainer theme={scheme === 'dark' ? MyDarkTheme : MyDefaultTheme}>
-      <Tabs/>
+    <NavigationContainer
+      theme={scheme === 'dark' ? MyDarkTheme : MyDefaultTheme}>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="StoreDetails" component={StoreDetailsScreen} />
+        <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
+        <Stack.Screen name="OrderDetails" component={OrderDetailsScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

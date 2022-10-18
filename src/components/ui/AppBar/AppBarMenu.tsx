@@ -18,7 +18,7 @@ const AppBarMenu = ({
       style={[
         style.wrapper,
         {
-          backgroundColor: theme.colors.appbar_menu,
+          backgroundColor: theme.colors.appbar.menu,
         },
       ]}>
       <IconButton onPress={onMorePress}>

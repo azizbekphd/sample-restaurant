@@ -4,6 +4,10 @@ import {useMyTheme} from '../../themes';
 import globalStyle from '../ui/globalStyles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Label, Subtitle} from '../ui/Text';
+import {useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '../../screens';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import ListTile from '../ui/ListTile';
 
 type StoresListItemProps = {
   store: Store;
@@ -11,39 +15,29 @@ type StoresListItemProps = {
 
 const StoresListItem = ({store}: StoresListItemProps) => {
   const theme = useMyTheme();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.8}
-      style={[
-        globalStyle.card,
-        style.wrapper,
-        {
-          backgroundColor: theme.colors.card,
-        },
-      ]}>
-      <MaterialCommunityIcons
-        name="storefront"
-        size={20}
-        color={theme.colors.icon.light}
-        style={{marginRight: 10}}
-      />
-      <View>
-        <Label.Medium>{store.name}</Label.Medium>
-        <Subtitle>
-          {store.address}
-        </Subtitle>
-      </View>
-    </TouchableOpacity>
+    <View style={globalStyle.card}>
+      <ListTile
+        onPress={() => {
+          navigation.navigate('StoreDetails', {store: store});
+        }}
+        leading={
+          <MaterialCommunityIcons
+            name="storefront"
+            size={20}
+            color={theme.colors.icon.light}
+          />
+        }>
+        <View>
+          <Label.Medium>{store.name}</Label.Medium>
+          <Subtitle>{store.address}</Subtitle>
+        </View>
+      </ListTile>
+    </View>
   );
 };
-
-const style = StyleSheet.create({
-  wrapper: {
-    flexDirection: 'row',
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-  },
-});
 
 export default StoresListItem;

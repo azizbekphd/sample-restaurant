@@ -30,6 +30,11 @@ const textStyles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "normal",
         lineHeight: 21,
+    },
+    body: {
+        fontSize: 14,
+        fontWeight: "normal",
+        lineHeight: 21,
     }
 })
 
